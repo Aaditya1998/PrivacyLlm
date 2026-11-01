@@ -1,0 +1,4 @@
+* text=auto
+# Runs on Linux GPU hosts; CRLF breaks the shebang and `set -euo pipefail`.
+*.sh text eol=lf
+*.yml text eol=lf
