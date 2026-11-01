@@ -37,7 +37,9 @@
         "SelfHostedLlm__BaseUrl": "http://localhost:11434",
         "SelfHostedLlm__Model": "qwen3:4b-instruct-2507-q4_K_M",
         "SelfHostedLlm__HealthPath": "v1/models",
-        "SelfHostedLlm__TimeoutSeconds": "300"
+        "SelfHostedLlm__TimeoutSeconds": "300",
+        "Storage__Provider": "Sqlite",
+        "ConnectionStrings__PrivacyLlm": "Data Source=privacyllm.db"
       }
     },
     "IIS Express": {

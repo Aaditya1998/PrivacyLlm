@@ -480,3 +480,9 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# Local SQLite stores hold consent records and encrypted payloads; never commit them
+*.db
+*.db-shm
+*.db-wal
+

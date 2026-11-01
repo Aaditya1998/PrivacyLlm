@@ -8,6 +8,7 @@ using PrivacyLlm.Core.Dpdp;
 using PrivacyLlm.Core.Inference;
 using PrivacyLlm.Core.Pipeline;
 using PrivacyLlm.Core.Policy;
+using PrivacyLlm.Core.Storage;
 
 namespace PrivacyLlm.Infrastructure;
 
@@ -26,6 +27,7 @@ public static class ServiceCollectionExtensions
         services.AddSingleton<IRoutingPolicy, PrivacyRoutingPolicy>();
         services.AddSingleton<IConsentRegistry, InMemoryConsentRegistry>();
         services.AddSingleton<IAuditLog, InMemoryAuditLog>();
+        services.AddSingleton<IExpiringBlobStore, InMemoryBlobStore>();
 
         var hashKey = config["Audit:HashKey"];
         services.AddSingleton(new GatewaySecrets(string.IsNullOrEmpty(hashKey) ? RandomNumberGenerator.GetBytes(32) : Convert.FromBase64String(hashKey)));

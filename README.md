@@ -15,6 +15,7 @@ and [deploy/vastai/README.md](deploy/vastai/README.md) for standing up vLLM.
 ```
 src/PrivacyLlm.Core            classification, routing policy, consent, pseudonymisation, audit, gateway
 src/PrivacyLlm.Infrastructure  vLLM + Anthropic HTTP clients, DI wiring
+src/PrivacyLlm.Persistence     EF Core stores (SQLite / SQL Server) for consent, audit, payloads, key ring
 src/PrivacyLlm.Api             ASP.NET Core minimal API + Hangfire server/dashboard
 tests/PrivacyLlm.Tests         xUnit: detector, routing invariants, gateway behaviour
 deploy/vastai                  vLLM start script and Vast.ai runbook
@@ -27,8 +28,10 @@ dotnet test
 dotnet run --project src/PrivacyLlm.Api
 ```
 
-Hangfire uses in-memory storage unless `ConnectionStrings:Hangfire` is set (SQL Server). Put secrets in
-user-secrets:
+Storage is in-memory by default. For data that survives restarts, set `Storage:Provider` to `Sqlite` or
+`SqlServer` and `ConnectionStrings:PrivacyLlm`. Consent, the audit trail, encrypted payloads and the Data
+Protection keys then go to that database (the `ollama` profile uses `privacyllm.db`). Hangfire's own queue uses
+SQL Server when `ConnectionStrings:Hangfire` is set, otherwise memory. Put secrets in user-secrets:
 
 ```bash
 dotnet user-secrets --project src/PrivacyLlm.Api set "SelfHostedLlm:ApiKey" "<vllm key>"
