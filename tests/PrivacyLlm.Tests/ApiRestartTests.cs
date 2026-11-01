@@ -11,6 +11,7 @@ namespace PrivacyLlm.Tests;
 /// Boots the real API twice against the same SQLite file to prove that consent, the audit trail and
 /// encrypted payloads (including the Data Protection keys needed to decrypt them) survive a restart.
 /// </summary>
+[Collection(ApiHostCollection.Name)]
 public sealed class ApiRestartTests : IDisposable
 {
     private readonly string _dbPath = Path.Combine(Path.GetTempPath(), $"privacyllm-test-{Guid.NewGuid():N}.db");
@@ -19,9 +20,11 @@ public sealed class ApiRestartTests : IDisposable
     {
         b.UseSetting("Storage:Provider", "Sqlite");
         b.UseSetting("ConnectionStrings:PrivacyLlm", $"Data Source={_dbPath}");
+        b.UseSetting("Audit:HashKey", Convert.ToBase64String(new byte[32])); // required outside Development
         // Port 9 (discard) refuses connections, so jobs fail fast and stay queued instead of calling a model.
         b.UseSetting("SelfHostedLlm:BaseUrl", "http://127.0.0.1:9");
         b.UseSetting("FrontierLlm:Enabled", "false");
+        b.WithFullAccessClient();
     });
 
     public void Dispose()
@@ -37,7 +40,7 @@ public sealed class ApiRestartTests : IDisposable
         string payloadId;
         using (var first = Boot())
         {
-            var http = first.CreateClient();
+            var http = first.CreateClient().WithKey(TestAuth.FullKey);
             (await http.PostAsJsonAsync("/api/consents", new { dataPrincipalId = "cust-42", purpose = "order-support", basis = "VoluntarilyProvided" })).EnsureSuccessStatusCode();
 
             // Rejected task -> one audit event.
@@ -55,7 +58,7 @@ public sealed class ApiRestartTests : IDisposable
         }
 
         using var second = Boot();
-        var http2 = second.CreateClient();
+        var http2 = second.CreateClient().WithKey(TestAuth.FullKey);
 
         var consents = await http2.GetFromJsonAsync<JsonElement>("/api/consents/cust-42");
         Assert.Equal("VoluntarilyProvided", consents[0].GetProperty("basis").GetString());

@@ -4,6 +4,12 @@ using PrivacyLlm.Core.Pipeline;
 
 namespace PrivacyLlm.Api.Jobs;
 
+/// <summary>A queued task and the API client that queued it; only that client may read the result.</summary>
+public sealed record QueuedTask(string Owner, LlmTask Task);
+
+/// <summary>A finished task's result, still tied to its owner: results contain personal data.</summary>
+public sealed record OwnedResult(string Owner, LlmTaskResult Result);
+
 public sealed class LlmTaskJob(IPrivacyGateway gateway, ProtectedPayloadStore store, ILogger<LlmTaskJob> logger)
 {
     public static string ResultKey(string payloadId) => "result:" + payloadId;
@@ -18,20 +24,30 @@ public sealed class LlmTaskJob(IPrivacyGateway gateway, ProtectedPayloadStore st
     [JobDisplayName("LLM task {0}")]
     public async Task RunAsync(string payloadId, CancellationToken ct)
     {
-        var task = store.Get<LlmTask>(payloadId);
-        if (task is null)
+        var queued = store.Get<QueuedTask>(payloadId);
+        if (queued is null)
         {
             logger.LogWarning("Payload {PayloadId} missing or expired; nothing to do", payloadId);
             return;
         }
 
+        // A payload stored before task ownership existed deserialises with no owner. Nobody could ever read its
+        // result, so drop it instead of failing on every retry.
+        if (queued.Task is null || string.IsNullOrEmpty(queued.Owner))
+        {
+            logger.LogWarning("Payload {PayloadId} has no owner (queued before API auth); deleting it unprocessed", payloadId);
+            store.Delete(payloadId);
+            return;
+        }
+
+        var task = queued.Task;
         var result = await gateway.ExecuteAsync(task, ct);
-        logger.LogInformation("Task {TaskId} ({TaskType}) -> {Outcome} via {Tier}", task.TaskId, task.TaskType, result.Outcome, result.Tier);
+        logger.LogInformation("Task {TaskId} ({TaskType}) for {Client} -> {Outcome} via {Tier}", task.TaskId, task.TaskType, queued.Owner, result.Outcome, result.Tier);
 
         if (result.Outcome == TaskOutcome.Unavailable)
             throw new LlmUnavailableException($"Task {task.TaskId}: {result.Reason}");
 
-        store.Put(result, ProtectedPayloadStore.ResultTtl, ResultKey(payloadId));
+        store.Put(new OwnedResult(queued.Owner, result), ProtectedPayloadStore.ResultTtl, ResultKey(payloadId));
         store.Delete(payloadId);
     }
 }
