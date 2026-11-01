@@ -81,8 +81,25 @@ then pseudonymised) samples per task, score exact-match on extracted fields and 
 
 ## Deployment notes
 
-- `ProtectedPayloadStore` is in-memory in this reference build. With multiple app instances or Hangfire on SQL
-  Server, back it with a shared store (SQL table or Redis) and persist the Data Protection key ring.
-- The consent registry and audit log are in-memory too; swap in durable implementations of `IConsentRegistry`
-  and `IAuditLog`.
+- **Storage** (`Storage:Provider`): `InMemory` (default, tests), `Sqlite` (single node, local dev) or `SqlServer`.
+  With a database, consent records, audit events, payload ciphertext and the Data Protection key ring all live in
+  it (`src/PrivacyLlm.Persistence`), so restarts and extra app instances keep working.
+- **Key ring placement:** keys stored in the same database as the ciphertext protect against Hangfire storage,
+  logs and backups of *other* systems leaking payloads, but not against someone who can read this whole database.
+  For that threat model, encrypt the key ring at rest (`ProtectKeysWithCertificate` / Azure Key Vault) or keep
+  keys in a separate store.
+- **Scaling out:** start one instance first (or create a key with `IKeyManager.CreateNewKey` in a deploy step)
+  before adding more. Data Protection takes no cross-process lock, so instances starting together on an empty
+  key table can each create a key and briefly fail to decrypt each other's payloads (Hangfire retries cover it).
+- **Identifiers:** principal ids, purposes and task ids are limited to `[A-Za-z0-9._:@-]`, max 128 characters,
+  at the API. On SQL Server, identifier columns use a binary collation, so `CUST-ab12` and `cust-AB12` stay
+  separate principals, as they are in memory and in SQLite.
+- **Audit hash key:** with durable storage, `Audit:HashKey` is required outside Development, or `InputHash` values
+  could never be matched after a restart. Keep it out of the audited database.
+- **Erasure on SQLite:** connections run `PRAGMA secure_delete = ON`, so purged payload ciphertext is overwritten
+  rather than left in free pages.
+- **Job queue:** Hangfire uses SQL Server when `ConnectionStrings:Hangfire` is set, otherwise memory. With
+  durable payloads but an in-memory queue, queued jobs are lost on restart (the app logs a warning at startup).
+- **Schema:** created with `EnsureCreated` to stay provider-agnostic. Move to EF migrations before the schema
+  has to evolve in production.
 - Frontier keys belong in a secret store (Key Vault / user-secrets), not `appsettings.json`.

@@ -3,6 +3,7 @@
   <ItemGroup>
     <ProjectReference Include="..\PrivacyLlm.Core\PrivacyLlm.Core.csproj" />
     <ProjectReference Include="..\PrivacyLlm.Infrastructure\PrivacyLlm.Infrastructure.csproj" />
+    <ProjectReference Include="..\PrivacyLlm.Persistence\PrivacyLlm.Persistence.csproj" />
   </ItemGroup>
 
   <ItemGroup>

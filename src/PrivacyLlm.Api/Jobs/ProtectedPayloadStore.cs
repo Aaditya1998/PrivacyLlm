@@ -1,6 +1,6 @@
-using System.Collections.Concurrent;
 using System.Text.Json;
 using Microsoft.AspNetCore.DataProtection;
+using PrivacyLlm.Core.Storage;
 
 namespace PrivacyLlm.Api.Jobs;
 
@@ -8,42 +8,37 @@ namespace PrivacyLlm.Api.Jobs;
 /// Hangfire serialises job arguments into its storage (SQL Server tables, dashboard views). Passing
 /// an <c>LlmTask</c> directly would persist raw customer names and phone numbers there indefinitely.
 /// Instead, payloads are encrypted with ASP.NET Core Data Protection and Hangfire only sees an id.
-/// Payloads are deleted once processed and results expire after <see cref="ResultTtl"/> (DPDP s.8(7)).
+/// The ciphertext goes to an <see cref="IExpiringBlobStore"/> (in-memory or database), so the
+/// store itself never holds plaintext. Payloads are deleted once processed and results expire
+/// after <see cref="ResultTtl"/> (DPDP s.8(7)).
 /// </summary>
-public sealed class ProtectedPayloadStore(IDataProtectionProvider provider, TimeProvider clock)
+public sealed class ProtectedPayloadStore(IDataProtectionProvider provider, IExpiringBlobStore blobs, TimeProvider clock)
 {
     public static readonly TimeSpan ResultTtl = TimeSpan.FromHours(24);
 
     private readonly IDataProtector _protector = provider.CreateProtector("PrivacyLlm.Payloads.v1");
-    private readonly ConcurrentDictionary<string, (byte[] Cipher, DateTimeOffset ExpiresAt)> _items = new();
 
     public string Put<T>(T value, TimeSpan ttl, string? id = null)
     {
         id ??= Guid.NewGuid().ToString("N");
-        _items[id] = (_protector.Protect(JsonSerializer.SerializeToUtf8Bytes(value)), clock.GetUtcNow() + ttl);
+        blobs.Put(id, _protector.Protect(JsonSerializer.SerializeToUtf8Bytes(value)), clock.GetUtcNow() + ttl);
         return id;
     }
 
     public T? Get<T>(string id)
     {
-        if (!_items.TryGetValue(id, out var item)) return default;
+        var item = blobs.Get(id);
+        if (item is null) return default;
         if (item.ExpiresAt <= clock.GetUtcNow())
         {
-            _items.TryRemove(id, out _);
+            blobs.Delete(id);
             return default;
         }
 
-        return JsonSerializer.Deserialize<T>(_protector.Unprotect(item.Cipher));
+        return JsonSerializer.Deserialize<T>(_protector.Unprotect(item.Data));
     }
 
-    public void Delete(string id) => _items.TryRemove(id, out _);
+    public void Delete(string id) => blobs.Delete(id);
 
-    public int PurgeExpired()
-    {
-        var now = clock.GetUtcNow();
-        var removed = 0;
-        foreach (var (key, item) in _items)
-            if (item.ExpiresAt <= now && _items.TryRemove(key, out _)) removed++;
-        return removed;
-    }
+    public int PurgeExpired() => blobs.PurgeExpired(clock.GetUtcNow());
 }

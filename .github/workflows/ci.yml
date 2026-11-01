@@ -8,6 +8,20 @@ on:
 jobs:
   build-test:
     runs-on: ubuntu-latest
+    services:
+      # SQL Server-only behaviour (collation, column lengths) is tested against a throwaway container.
+      mssql:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        env:
+          ACCEPT_EULA: "Y"
+          MSSQL_SA_PASSWORD: CiOnly_Passw0rd!  # disposable CI container, not a real credential
+        ports:
+          - 1433:1433
+        options: >-
+          --health-cmd "/opt/mssql-tools18/bin/sqlcmd -C -S localhost -U sa -P 'CiOnly_Passw0rd!' -Q 'SELECT 1'"
+          --health-interval 10s --health-timeout 5s --health-retries 10
+    env:
+      PRIVACYLLM_SQLSERVER_TEST: Server=localhost,1433;User Id=sa;Password=CiOnly_Passw0rd!;TrustServerCertificate=true
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-dotnet@v4
