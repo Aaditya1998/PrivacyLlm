@@ -42,15 +42,22 @@ public sealed class DataClassifier(IPiiDetector detector) : IDataClassifier
             }
         }
 
-        foreach (var group in matches.GroupBy(m => m.Type))
+        foreach (var group in matches.Where(m => !m.Tentative).GroupBy(m => m.Type))
         {
             var level = HighRisk.Contains(group.Key) ? DataSensitivity.HighRiskPersonal : DataSensitivity.Personal;
             sensitivity = Max(sensitivity, level);
             reasons.Add($"detected {group.Count()} x {group.Key}");
         }
 
+        // Possible names do not raise sensitivity (so they never trigger a consent rejection), but they
+        // keep the text off the frontier tier. Reasons carry counts and scores only, never the words.
+        var tentative = matches.Where(m => m.Tentative).ToList();
+        var maxNameScore = matches.Where(m => m.Source == "Name").Select(m => m.Confidence).DefaultIfEmpty(0).Max();
+        if (tentative.Count > 0)
+            reasons.Add($"{tentative.Count} possible person name(s) (max score {tentative.Max(m => m.Confidence):0.00})");
+
         if (reasons.Count == 0) reasons.Add("no personal data detected");
-        return new ClassificationResult(sensitivity, matches, reasons);
+        return new ClassificationResult(sensitivity, matches, reasons, tentative.Count > 0, maxNameScore);
     }
 
     private static DataSensitivity Max(DataSensitivity a, DataSensitivity b) => a > b ? a : b;

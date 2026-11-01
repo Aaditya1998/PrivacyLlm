@@ -22,6 +22,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Data\*.jsonl" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\src\PrivacyLlm.Core\PrivacyLlm.Core.csproj" />
     <ProjectReference Include="..\..\src\PrivacyLlm.Infrastructure\PrivacyLlm.Infrastructure.csproj" />
     <ProjectReference Include="..\..\src\PrivacyLlm.Persistence\PrivacyLlm.Persistence.csproj" />

@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using PrivacyLlm.Core.Audit;
 using PrivacyLlm.Core.Classification;
+using PrivacyLlm.Core.Classification.Names;
 using PrivacyLlm.Core.Dpdp;
 using PrivacyLlm.Core.Inference;
 using PrivacyLlm.Core.Pipeline;
@@ -22,7 +23,13 @@ public static class ServiceCollectionExtensions
         services.AddSingleton(sp => sp.GetRequiredService<IOptions<RoutingOptions>>().Value);
 
         services.TryAddSingletonTimeProvider();
-        services.AddSingleton<IPiiDetector, RegexPiiDetector>();
+        services.Configure<NameScoringOptions>(config.GetSection(NameScoringOptions.Section));
+        services.AddSingleton(sp => sp.GetRequiredService<IOptions<NameScoringOptions>>().Value);
+        services.AddSingleton<NameLexicon>();
+        services.AddSingleton<RegexPiiDetector>();
+        services.AddSingleton<ContextualNameDetector>();
+        services.AddSingleton<IPiiDetector>(sp => new CompositePiiDetector(
+            sp.GetRequiredService<RegexPiiDetector>(), sp.GetRequiredService<ContextualNameDetector>()));
         services.AddSingleton<IDataClassifier, DataClassifier>();
         services.AddSingleton<IRoutingPolicy, PrivacyRoutingPolicy>();
         services.AddSingleton<IConsentRegistry, InMemoryConsentRegistry>();
