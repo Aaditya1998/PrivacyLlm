@@ -1,0 +1,240 @@
+{"id": "n001", "text": "Ravi said the parcel was late again.", "names": ["Ravi"], "category": "mid_sentence"}
+{"id": "n002", "text": "The replacement was handed to Meenakshi at the gate.", "names": ["Meenakshi"], "category": "mid_sentence"}
+{"id": "n003", "text": "Can you check why Harpreet never got the OTP?", "names": ["Harpreet"], "category": "mid_sentence"}
+{"id": "n004", "text": "Arjun called twice asking about the EMI schedule.", "names": ["Arjun"], "category": "mid_sentence"}
+{"id": "n005", "text": "I think Fatima already raised a ticket for this.", "names": ["Fatima"], "category": "mid_sentence"}
+{"id": "n006", "text": "Escalated to Venkatesh because the warranty claim is stuck.", "names": ["Venkatesh"], "category": "mid_sentence"}
+{"id": "n007", "text": "Delivery partner said Sanjay was not at home, so the package went back.", "names": ["Sanjay"], "category": "mid_sentence"}
+{"id": "n008", "text": "Our agent told Joseph the cheque would clear by Friday.", "names": ["Joseph"], "category": "mid_sentence"}
+{"id": "n009", "text": "Not sure if Tenzin got the replacement charger.", "names": ["Tenzin"], "category": "mid_sentence"}
+{"id": "n010", "text": "Waiting on Gurjeet to send photos of the damaged box.", "names": ["Gurjeet"], "category": "mid_sentence"}
+{"id": "n011", "text": "The technician met Farhan and replaced the compressor.", "names": ["Farhan"], "category": "mid_sentence"}
+{"id": "n012", "text": "Hi Priya, your refund has been processed.", "names": ["Priya"], "category": "greeting"}
+{"id": "n013", "text": "Hello Mohammed, thanks for your patience while we checked.", "names": ["Mohammed"], "category": "greeting"}
+{"id": "n014", "text": "Dear Anjali, we regret the delay in delivering your order.", "names": ["Anjali"], "category": "greeting"}
+{"id": "n015", "text": "Hey Karan, the courier will reach by 6 pm.", "names": ["Karan"], "category": "greeting"}
+{"id": "n016", "text": "Good morning Deepika, the technician will visit at 11.", "names": ["Deepika"], "category": "greeting"}
+{"id": "n017", "text": "Hi team, Vikram here, my login is still failing.", "names": ["Vikram"], "category": "greeting"}
+{"id": "n018", "text": "Hi Aditi! Your subscription renews next week.", "names": ["Aditi"], "category": "greeting"}
+{"id": "n019", "text": "Dear Ramanathan, please find the revised quote attached.", "names": ["Ramanathan"], "category": "greeting"}
+{"id": "n020", "text": "Hi Zoya, sorry for the trouble with the size exchange.", "names": ["Zoya"], "category": "greeting"}
+{"id": "n021", "text": "Hi Sneha and Rahul, both orders are now merged into one shipment.", "names": ["Sneha", "Rahul"], "category": "greeting"}
+{"id": "n022", "text": "Please process this quickly.\nregards, Kavita Rao", "names": ["Kavita Rao"], "category": "signoff"}
+{"id": "n023", "text": "Let me know once it is fixed.\n\nWarm regards,\nSiddharth Menon", "names": ["Siddharth Menon"], "category": "signoff"}
+{"id": "n024", "text": "Will update once the courier confirms. - Nilesh", "names": ["Nilesh"], "category": "signoff"}
+{"id": "n025", "text": "The issue is resolved now. Thank you, Ayesha", "names": ["Ayesha"], "category": "signoff"}
+{"id": "n026", "text": "Thanks Karthik, that fixed it.", "names": ["Karthik"], "category": "signoff"}
+{"id": "n027", "text": "Appreciate the quick help. Cheers, Aaron", "names": ["Aaron"], "category": "signoff"}
+{"id": "n028", "text": "Kindly refund the amount at the earliest.\nBest,\nPhurba Sherpa", "names": ["Phurba Sherpa"], "category": "signoff"}
+{"id": "n029", "text": "Sent from my phone - Rupinder", "names": ["Rupinder"], "category": "signoff"}
+{"id": "n030", "text": "Regards\nAbhijit Sengupta\nProcurement", "names": ["Abhijit Sengupta"], "category": "signoff"}
+{"id": "n031", "text": "ok noted, thx\n-tanvi", "names": ["tanvi"], "category": "signoff"}
+{"id": "n032", "text": "Sincerely,\nCelina Lobo", "names": ["Celina Lobo"], "category": "signoff"}
+{"id": "n033", "text": "Thanks & regards, Yashwant Kagzi", "names": ["Yashwant Kagzi"], "category": "signoff"}
+{"id": "n034", "text": "spoke to suresh yesterday about the refund", "names": ["suresh"], "category": "lowercase"}
+{"id": "n035", "text": "hey rohit any update on my order", "names": ["rohit"], "category": "lowercase"}
+{"id": "n036", "text": "pls ask manoj to call back the customer", "names": ["manoj"], "category": "lowercase"}
+{"id": "n037", "text": "meena said the cod amount was collected", "names": ["meena"], "category": "lowercase"}
+{"id": "n038", "text": "ticket raised by harish still pending", "names": ["harish"], "category": "lowercase"}
+{"id": "n039", "text": "call karan sharma regarding the duplicate charge", "names": ["karan sharma"], "category": "lowercase"}
+{"id": "n040", "text": "divya wants delivery after 7 pm only", "names": ["divya"], "category": "lowercase"}
+{"id": "n041", "text": "forwarded to abdul for pickup scheduling", "names": ["abdul"], "category": "lowercase"}
+{"id": "n042", "text": "Anil bhai ka order abhi tak nahi aaya.", "names": ["Anil"], "category": "hinglish_honorific"}
+{"id": "n043", "text": "Sunita didi bol rahi thi ki packet phata hua tha.", "names": ["Sunita"], "category": "hinglish_honorific"}
+{"id": "n044", "text": "Verma sir ne refund ke liye bola hai.", "names": ["Verma"], "category": "hinglish_honorific"}
+{"id": "n045", "text": "Pinky madam ka complaint close kar do.", "names": ["Pinky"], "category": "hinglish_honorific"}
+{"id": "n046", "text": "Gupta ji ka cylinder kal deliver hoga.", "names": ["Gupta"], "category": "hinglish_honorific"}
+{"id": "n047", "text": "mohan bhai ne bola payment ho gaya", "names": ["mohan"], "category": "hinglish_honorific"}
+{"id": "n048", "text": "Imran bhai, aapka parcel hub pe pada hai.", "names": ["Imran"], "category": "hinglish_honorific"}
+{"id": "n049", "text": "Kal Lakshmi aunty ne phone kiya tha bill ke baare mein.", "names": ["Lakshmi"], "category": "hinglish_honorific"}
+{"id": "n050", "text": "Shalini ma'am wants a callback after 5.", "names": ["Shalini"], "category": "hinglish_honorific"}
+{"id": "n051", "text": "Rathod saab ka gas connection transfer pending hai.", "names": ["Rathod"], "category": "hinglish_honorific"}
+{"id": "n052", "text": "Ganesh anna said the shop will open late today.", "names": ["Ganesh"], "category": "hinglish_honorific"}
+{"id": "n053", "text": "Selvi akka asked for a Tamil copy of the invoice.", "names": ["Selvi"], "category": "hinglish_honorific"}
+{"id": "n054", "text": "Subhankar da bolchilo order ta cancel hoye geche.", "names": ["Subhankar"], "category": "hinglish_honorific"}
+{"id": "n055", "text": "Namaste Sharmila ji, aapka order dispatch ho gaya hai.", "names": ["Sharmila"], "category": "hinglish_honorific"}
+{"id": "n056", "text": "Murugan wants the AMC renewed for both ACs.", "names": ["Murugan"], "category": "community_south"}
+{"id": "n057", "text": "The refund for Anitha Nair was approved this morning.", "names": ["Anitha Nair"], "category": "community_south"}
+{"id": "n058", "text": "Shreyas Hegde reported the app crashing on checkout.", "names": ["Shreyas Hegde"], "category": "community_south"}
+{"id": "n059", "text": "Padmavathi is asking whether the gold coin can be exchanged.", "names": ["Padmavathi"], "category": "community_south"}
+{"id": "n060", "text": "Please send the duplicate bill to Lakshmipathi Reddy.", "names": ["Lakshmipathi Reddy"], "category": "community_south"}
+{"id": "n061", "text": "Debashish Mukherjee says the smart meter shows zero usage.", "names": ["Debashish Mukherjee"], "category": "community_east"}
+{"id": "n062", "text": "Biswajit Mohanty from Cuttack wants to reschedule the installation.", "names": ["Biswajit Mohanty"], "category": "community_east"}
+{"id": "n063", "text": "Rupam Bora has not received the tea samples yet.", "names": ["Rupam Bora"], "category": "community_east"}
+{"id": "n064", "text": "Sutapa asked if we deliver to Howrah.", "names": ["Sutapa"], "category": "community_east"}
+{"id": "n065", "text": "Jignesh Shah wants GST added on the invoice.", "names": ["Jignesh Shah"], "category": "community_west"}
+{"id": "n066", "text": "Chaitali Deshmukh confirmed the pickup from Pune.", "names": ["Chaitali Deshmukh"], "category": "community_west"}
+{"id": "n067", "text": "Dhaval left a voice note about the wrong colour.", "names": ["Dhaval"], "category": "community_west"}
+{"id": "n068", "text": "Neha Chauhan from Dehradun asked about EMI options.", "names": ["Neha Chauhan"], "category": "community_north"}
+{"id": "n069", "text": "Rajesh Kumar wants the broadband shifted to his new flat.", "names": ["Rajesh Kumar"], "category": "community_north"}
+{"id": "n070", "text": "Lalrinpuii wants to know when the Aizawl store reopens.", "names": ["Lalrinpuii"], "category": "community_northeast"}
+{"id": "n071", "text": "Khumanthem Bijoy reported a billing mismatch.", "names": ["Khumanthem Bijoy"], "category": "community_northeast"}
+{"id": "n072", "text": "Imtiwapang Ao asked to change the delivery slot.", "names": ["Imtiwapang Ao"], "category": "community_northeast"}
+{"id": "n073", "text": "Pema Wangmo needs the warranty card resent.", "names": ["Pema Wangmo"], "category": "community_northeast"}
+{"id": "n074", "text": "Faisal Qureshi requested a cash-on-delivery refund.", "names": ["Faisal Qureshi"], "category": "community_muslim"}
+{"id": "n075", "text": "Nazia called again, she still has no internet.", "names": ["Nazia"], "category": "community_muslim"}
+{"id": "n076", "text": "Abdul Rahim Ansari wants to cancel the second instalment.", "names": ["Abdul Rahim Ansari"], "category": "community_muslim"}
+{"id": "n077", "text": "Manjit Kaur asked for the grocery delivery before noon.", "names": ["Manjit Kaur"], "category": "community_sikh"}
+{"id": "n078", "text": "Simran said the cake arrived squashed.", "names": ["Simran"], "category": "community_sikh"}
+{"id": "n079", "text": "Rosy Fernandes from Margao wants a refund for the torn curtains.", "names": ["Rosy Fernandes"], "category": "community_christian"}
+{"id": "n080", "text": "Anthony D'Souza already returned the laptop.", "names": ["Anthony D'Souza"], "category": "community_christian"}
+{"id": "n081", "text": "Jacob Kurian called from Kottayam about the policy renewal.", "names": ["Jacob Kurian"], "category": "community_christian"}
+{"id": "n082", "text": "The order placed by Zubin Mistry shows as returned.", "names": ["Zubin Mistry"], "category": "community_parsi"}
+{"id": "n083", "text": "Perizaad Bharucha needs the bakery order delivered by 8.", "names": ["Perizaad Bharucha"], "category": "community_parsi"}
+{"id": "n084", "text": "Somra Munda from Khunti asked about the seed kit delivery.", "names": ["Somra Munda"], "category": "community_tribal"}
+{"id": "n085", "text": "Sukhmati Hansda has not got her pension SMS.", "names": ["Sukhmati Hansda"], "category": "community_tribal"}
+{"id": "n086", "text": "Budhni Soren came to the branch for the passbook update.", "names": ["Budhni Soren"], "category": "community_tribal"}
+{"id": "n087", "text": "Mangal Gond wants the solar lamp replaced.", "names": ["Mangal Gond"], "category": "community_tribal"}
+{"id": "n088", "text": "Ravi's parcel was left at the wrong address.", "names": ["Ravi"], "category": "possessive"}
+{"id": "n089", "text": "Fatima's refund failed because of a bank name mismatch.", "names": ["Fatima"], "category": "possessive"}
+{"id": "n090", "text": "Can you check Joseph's ticket? He has called three times.", "names": ["Joseph"], "category": "possessive"}
+{"id": "n091", "text": "Please upgrade Neelam's plan to the annual one.", "names": ["Neelam"], "category": "possessive"}
+{"id": "n092", "text": "rahul's order shows delivered but he never got it", "names": ["rahul"], "category": "possessive"}
+{"id": "n093", "text": "Swati's complaint about the noisy fan is still open.", "names": ["Swati"], "category": "possessive"}
+{"id": "n094", "text": "Hemant Patil's scooter service is overdue.", "names": ["Hemant Patil"], "category": "possessive"}
+{"id": "n095", "text": "Ankit Tyagi's SIM swap request needs verification.", "names": ["Ankit Tyagi"], "category": "possessive"}
+{"id": "n096", "text": "Kipa Tana's order is stuck at the Itanagar hub.", "names": ["Kipa Tana"], "category": "possessive"}
+{"id": "n097", "text": "Jaswinder Singh Gill's truck booking was charged twice.", "names": ["Jaswinder Singh Gill"], "category": "possessive"}
+{"id": "n098", "text": "Kersi Daruwala's insurance claim needs one more document.", "names": ["Kersi Daruwala"], "category": "possessive"}
+{"id": "n099", "text": "Asha called to say her gas cylinder was not delivered.", "names": ["Asha"], "category": "word_as_name"}
+{"id": "n100", "text": "Raja is still waiting for his refund cheque.", "names": ["Raja"], "category": "word_as_name"}
+{"id": "n101", "text": "Kiran said the TV remote is not pairing.", "names": ["Kiran"], "category": "word_as_name"}
+{"id": "n102", "text": "Sunny wants to change his delivery address.", "names": ["Sunny"], "category": "word_as_name"}
+{"id": "n103", "text": "Pooja asked whether the dress can be exchanged for a larger size.", "names": ["Pooja"], "category": "word_as_name"}
+{"id": "n104", "text": "Deepak complained that the bill was higher this month.", "names": ["Deepak"], "category": "word_as_name"}
+{"id": "n105", "text": "Bharat from the Nashik branch approved the replacement.", "names": ["Bharat"], "category": "word_as_name"}
+{"id": "n106", "text": "Prem has not paid the last two EMIs.", "names": ["Prem"], "category": "word_as_name"}
+{"id": "n107", "text": "Hi Usha, your booking is confirmed.", "names": ["Usha"], "category": "word_as_name"}
+{"id": "n108", "text": "Thanks Anand, the router is working now.", "names": ["Anand"], "category": "word_as_name"}
+{"id": "n109", "text": "Shanti ji ka order cancel karna hai.", "names": ["Shanti"], "category": "word_as_name"}
+{"id": "n110", "text": "Grace from accounts says the payment bounced.", "names": ["Grace"], "category": "word_as_name"}
+{"id": "n111", "text": "Please ask Mark to verify the serial number.", "names": ["Mark"], "category": "word_as_name"}
+{"id": "n112", "text": "Sagar's laptop is still at the service centre.", "names": ["Sagar"], "category": "word_as_name"}
+{"id": "n113", "text": "Joy said the router keeps dropping at night.", "names": ["Joy"], "category": "word_as_name"}
+{"id": "n114", "text": "Moti bhai ka scooter ready hai.", "names": ["Moti"], "category": "word_as_name"}
+{"id": "n115", "text": "Rose called about the missing earring.", "names": ["Rose"], "category": "word_as_name"}
+{"id": "n116", "text": "Bill wants to know why his card was declined.", "names": ["Bill"], "category": "word_as_name"}
+{"id": "n117", "text": "Ramesh and Geeta both asked for the same delivery slot.", "names": ["Ramesh", "Geeta"], "category": "multiple_names"}
+{"id": "n118", "text": "Tell Arif that Kavya has already approved the refund.", "names": ["Arif", "Kavya"], "category": "multiple_names"}
+{"id": "n119", "text": "Sneha, Rahul and Ibrahim are on the escalation call.", "names": ["Sneha", "Rahul", "Ibrahim"], "category": "multiple_names"}
+{"id": "n120", "text": "Priyanka spoke to Thomas and then to Harjit about the damaged sofa.", "names": ["Priyanka", "Thomas", "Harjit"], "category": "multiple_names"}
+{"id": "n121", "text": "Nitin forwarded Leela's complaint to Dinesh.", "names": ["Nitin", "Leela", "Dinesh"], "category": "multiple_names"}
+{"id": "n122", "text": "Akash Jain and Ritu Jain share the same account.", "names": ["Akash Jain", "Ritu Jain"], "category": "multiple_names"}
+{"id": "n123", "text": "Jaya and Vijay both want separate invoices.", "names": ["Jaya", "Vijay"], "category": "multiple_names"}
+{"id": "n124", "text": "Ramesh lives near Rajiv Chowk and wants delivery after 6.", "names": ["Ramesh"], "category": "person_plus_place_or_brand"}
+{"id": "n125", "text": "Lakshmi from Lakshmi Nagar wants her cooler repaired.", "names": ["Lakshmi"], "category": "person_plus_place_or_brand"}
+{"id": "n126", "text": "Krishna said the parcel got wet near the Krishna river bridge.", "names": ["Krishna"], "category": "person_plus_place_or_brand"}
+{"id": "n127", "text": "Ganesh will collect the modak order before Ganesh Chaturthi.", "names": ["Ganesh"], "category": "person_plus_place_or_brand"}
+{"id": "n128", "text": "Tata Salt sachets were missing from Raghav's order.", "names": ["Raghav"], "category": "person_plus_place_or_brand"}
+{"id": "n129", "text": "The Mahindra Thar booking for Gurpreet is confirmed.", "names": ["Gurpreet"], "category": "person_plus_place_or_brand"}
+{"id": "n130", "text": "Indira took a cab from Indira Gandhi airport but the driver cancelled.", "names": ["Indira"], "category": "person_plus_place_or_brand"}
+{"id": "n131", "text": "Delivery to Lakshmi Nagar is delayed due to waterlogging.", "names": [], "category": "place_from_person"}
+{"id": "n132", "text": "The metro is closed at Rajiv Chowk till noon.", "names": [], "category": "place_from_person"}
+{"id": "n133", "text": "Flights from Indira Gandhi airport are delayed because of fog.", "names": [], "category": "place_from_person"}
+{"id": "n134", "text": "Water levels in the Krishna river have risen near the depot.", "names": [], "category": "place_from_person"}
+{"id": "n135", "text": "Our new store opens in Nehru Place next week.", "names": [], "category": "place_from_person"}
+{"id": "n136", "text": "Pickup point has moved to Sardar Patel Road.", "names": [], "category": "place_from_person"}
+{"id": "n137", "text": "Trains from Chhatrapati Shivaji Terminus are running late.", "names": [], "category": "place_from_person"}
+{"id": "n138", "text": "Cargo to Netaji Subhas Chandra Bose airport resumes tomorrow.", "names": [], "category": "place_from_person"}
+{"id": "n139", "text": "The MG Road branch will close early on Saturday.", "names": [], "category": "place_from_person"}
+{"id": "n140", "text": "Traffic diversions are in place around Mahatma Gandhi Marg.", "names": [], "category": "place_from_person"}
+{"id": "n141", "text": "Anand Vihar ISBT has a new parcel counter.", "names": [], "category": "place_from_person"}
+{"id": "n142", "text": "Install slots are available in Indiranagar and Jayanagar.", "names": [], "category": "place_from_person"}
+{"id": "n143", "text": "Free shipping this month for pin codes along the Godavari and Kaveri.", "names": [], "category": "place_from_person"}
+{"id": "n144", "text": "Orders placed before Ganesh Chaturthi will ship on priority.", "names": [], "category": "festival"}
+{"id": "n145", "text": "Offices remain closed for Guru Nanak Jayanti.", "names": [], "category": "festival"}
+{"id": "n146", "text": "Expect delays around Durga Puja in Kolkata.", "names": [], "category": "festival"}
+{"id": "n147", "text": "Gandhi Jayanti is a bank holiday, so refunds will process the next day.", "names": [], "category": "festival"}
+{"id": "n148", "text": "Ram Navami falls on a Wednesday this year.", "names": [], "category": "festival"}
+{"id": "n149", "text": "Janmashtami gift hampers are back in stock.", "names": [], "category": "festival"}
+{"id": "n150", "text": "Ambedkar Jayanti holiday may affect NEFT transfers.", "names": [], "category": "festival"}
+{"id": "n151", "text": "Eid and Christmas weekends see the highest order volumes.", "names": [], "category": "festival"}
+{"id": "n152", "text": "Mahavir Jayanti closures apply to all Gujarat branches.", "names": [], "category": "festival"}
+{"id": "n153", "text": "Buddha Purnima special thali is available at all outlets.", "names": [], "category": "festival"}
+{"id": "n154", "text": "Lord Ganesha idols in brass are back in stock.", "names": [], "category": "deity_product"}
+{"id": "n155", "text": "Hanuman Chalisa booklets ship free with every pooja kit.", "names": [], "category": "deity_product"}
+{"id": "n156", "text": "Krishna idol with flute, 8 inch, antique finish.", "names": [], "category": "deity_product"}
+{"id": "n157", "text": "Saraswati puja kits will be dispatched by Thursday.", "names": [], "category": "deity_product"}
+{"id": "n158", "text": "Lakshmi pooja thali set includes kumkum and diya.", "names": [], "category": "deity_product"}
+{"id": "n159", "text": "Two packs of Tata Salt were missing from the grocery order.", "names": [], "category": "brand"}
+{"id": "n160", "text": "The Maruti Swift service is due at 20,000 km.", "names": [], "category": "brand"}
+{"id": "n161", "text": "Mahindra tractors get an extended warranty this quarter.", "names": [], "category": "brand"}
+{"id": "n162", "text": "Godrej almirah delivery will need two people.", "names": [], "category": "brand"}
+{"id": "n163", "text": "Amul butter is out of stock in the Pune warehouse.", "names": [], "category": "brand"}
+{"id": "n164", "text": "Haldiram's bhujia was replaced with a different brand.", "names": [], "category": "brand"}
+{"id": "n165", "text": "The Bajaj mixer grinder jar is cracked.", "names": [], "category": "brand"}
+{"id": "n166", "text": "Customer wants a Titan watch strap replacement.", "names": [], "category": "brand"}
+{"id": "n167", "text": "Raymond suiting fabric is back on the website.", "names": [], "category": "brand"}
+{"id": "n168", "text": "Is the Kirloskar pump covered under warranty?", "names": [], "category": "brand"}
+{"id": "n169", "text": "Dabur honey bottles leaked during transit.", "names": [], "category": "brand"}
+{"id": "n170", "text": "Britannia and Parle biscuits are on a combo offer.", "names": [], "category": "brand"}
+{"id": "n171", "text": "There is still asha that the shipment will arrive before the wedding.", "names": [], "category": "ordinary_word"}
+{"id": "n172", "text": "We sell raja-sized beds with free installation.", "names": [], "category": "ordinary_word"}
+{"id": "n173", "text": "Deliveries are suspended due to the bharat bandh tomorrow.", "names": [], "category": "ordinary_word"}
+{"id": "n174", "text": "Add a brass deepak lamp to the festive kit.", "names": [], "category": "ordinary_word"}
+{"id": "n175", "text": "Pooja items like diya and incense are 10% off.", "names": [], "category": "ordinary_word"}
+{"id": "n176", "text": "The kiran border saree is sold out.", "names": [], "category": "ordinary_word"}
+{"id": "n177", "text": "Expect sunny weather in Chennai this week, so no rain delays.", "names": [], "category": "ordinary_word"}
+{"id": "n178", "text": "Please pay the bill before the 5th to avoid late fees.", "names": [], "category": "ordinary_word"}
+{"id": "n179", "text": "Mark the ticket as resolved once the customer confirms.", "names": [], "category": "ordinary_word"}
+{"id": "n180", "text": "Your grace period ends in 7 days.", "names": [], "category": "ordinary_word"}
+{"id": "n181", "text": "May I know your preferred delivery time?", "names": [], "category": "ordinary_word"}
+{"id": "n182", "text": "Will you be available for the installation tomorrow?", "names": [], "category": "ordinary_word"}
+{"id": "n183", "text": "We welcome frank feedback on the new app.", "names": [], "category": "ordinary_word"}
+{"id": "n184", "text": "Rose gold colour is unavailable for this phone.", "names": [], "category": "ordinary_word"}
+{"id": "n185", "text": "Only Bharat Stage VI compliant vehicles can enter the depot.", "names": [], "category": "ordinary_word"}
+{"id": "n186", "text": "Joy of giving week starts with free gift wrap on all orders.", "names": [], "category": "ordinary_word"}
+{"id": "n187", "text": "The raja rani swing set ships flat-packed.", "names": [], "category": "ordinary_word"}
+{"id": "n188", "text": "Introducing the all-new Smart Kettle with auto shut-off and 1.7 L capacity.", "names": [], "category": "product_copy"}
+{"id": "n189", "text": "Grab the Monsoon Mega Sale: flat 40% off on rainwear.", "names": [], "category": "product_copy"}
+{"id": "n190", "text": "Our Premium Plan includes priority support and free returns.", "names": [], "category": "product_copy"}
+{"id": "n191", "text": "Crafted with Love, Packed with Care: the Festive Hamper Collection.", "names": [], "category": "product_copy"}
+{"id": "n192", "text": "Royal Comfort Mattress with memory foam, now in Queen and King sizes.", "names": [], "category": "product_copy"}
+{"id": "n193", "text": "The Maharaja Thali serves four and includes dessert.", "names": [], "category": "product_copy"}
+{"id": "n194", "text": "New Arrivals: Banarasi silk sarees in Ruby, Emerald and Pearl shades.", "names": [], "category": "product_copy"}
+{"id": "n195", "text": "Shop the Rani Pink collection before it sells out.", "names": [], "category": "product_copy"}
+{"id": "n196", "text": "Victoria Sponge cake is now available eggless.", "names": [], "category": "product_copy"}
+{"id": "n197", "text": "The refund will be credited by Monday.", "names": [], "category": "date_word"}
+{"id": "n198", "text": "Store hours change from April to June.", "names": [], "category": "date_word"}
+{"id": "n199", "text": "Your plan renews on 1 August.", "names": [], "category": "date_word"}
+{"id": "n200", "text": "Payments made after Friday will reflect next week.", "names": [], "category": "date_word"}
+{"id": "n201", "text": "Sunday deliveries are available in select pin codes.", "names": [], "category": "date_word"}
+{"id": "n202", "text": "Billing cycle runs from March 5 to April 4.", "names": [], "category": "date_word"}
+{"id": "n203", "text": "Next maintenance window is Tuesday night.", "names": [], "category": "date_word"}
+{"id": "n204", "text": "Kindly share the order number so we can check.", "names": [], "category": "sentence_initial"}
+{"id": "n205", "text": "Unfortunately the item is out of stock.", "names": [], "category": "sentence_initial"}
+{"id": "n206", "text": "Received the parcel but the seal was broken.", "names": [], "category": "sentence_initial"}
+{"id": "n207", "text": "Attached is the revised invoice.", "names": [], "category": "sentence_initial"}
+{"id": "n208", "text": "Noted, will escalate to the logistics team.", "names": [], "category": "sentence_initial"}
+{"id": "n209", "text": "Refund initiated, it will take 5 to 7 working days.", "names": [], "category": "sentence_initial"}
+{"id": "n210", "text": "Delivered. Kindly rate your experience.", "names": [], "category": "sentence_initial"}
+{"id": "n211", "text": "Checked the logs, the payment gateway timed out.", "names": [], "category": "sentence_initial"}
+{"id": "n212", "text": "if (order.Status == OrderStatus.Delivered) { SendFeedbackEmail(order); }", "names": [], "category": "code"}
+{"id": "n213", "text": "SELECT customer_id, total FROM orders WHERE status = 'PENDING';", "names": [], "category": "code"}
+{"id": "n214", "text": "var client = new HttpClient(); client.Timeout = TimeSpan.FromSeconds(30);", "names": [], "category": "code"}
+{"id": "n215", "text": "git checkout -b feat/refund-flow && dotnet test", "names": [], "category": "code"}
+{"id": "n216", "text": "ERROR 2026-10-12 RefundService: NullReferenceException at Process()", "names": [], "category": "code"}
+{"id": "n217", "text": "public class DeliveryAgent { public string Region { get; set; } }", "names": [], "category": "code"}
+{"id": "n218", "text": "logger.LogInformation(\"Retrying {Attempt}\", attempt);", "names": [], "category": "code"}
+{"id": "n219", "text": "Support Team will reach out within 24 hours.", "names": [], "category": "team_role"}
+{"id": "n220", "text": "Please contact the Ops Desk for pickup changes.", "names": [], "category": "team_role"}
+{"id": "n221", "text": "Assigned to Billing Desk for review.", "names": [], "category": "team_role"}
+{"id": "n222", "text": "The Field Engineer will visit between 10 and 1.", "names": [], "category": "team_role"}
+{"id": "n223", "text": "Escalated to Tier 2 Support.", "names": [], "category": "team_role"}
+{"id": "n224", "text": "Regards, Customer Care Team", "names": [], "category": "team_role"}
+{"id": "n225", "text": "Store Manager approved the exchange. - Accounts Team", "names": [], "category": "team_role"}
+{"id": "n226", "text": "bhaiya order kab aayega?", "names": [], "category": "honorific_no_name"}
+{"id": "n227", "text": "didi ne bola packet phata hua tha", "names": [], "category": "honorific_no_name"}
+{"id": "n228", "text": "sir ne refund ke liye bola hai", "names": [], "category": "honorific_no_name"}
+{"id": "n229", "text": "Ji, aapka order dispatch ho gaya hai.", "names": [], "category": "honorific_no_name"}
+{"id": "n230", "text": "Dear customer, your OTP verification is pending.", "names": [], "category": "honorific_no_name"}
+{"id": "n231", "text": "Hi, my order is late, please help.", "names": [], "category": "honorific_no_name"}
+{"id": "n232", "text": "Hello team, any update on the refund?", "names": [], "category": "honorific_no_name"}
+{"id": "n233", "text": "Thanks for the quick resolution. Regards, a frustrated customer", "names": [], "category": "honorific_no_name"}
+{"id": "n234", "text": "The warehouse received 420 units and dispatched 380 today.", "names": [], "category": "business_text"}
+{"id": "n235", "text": "Return rate for footwear dropped to 6 percent in October.", "names": [], "category": "business_text"}
+{"id": "n236", "text": "Courier SLA breaches are up 12 percent this week.", "names": [], "category": "business_text"}
+{"id": "n237", "text": "Please reconcile the COD collections for the Bengaluru hub.", "names": [], "category": "business_text"}
+{"id": "n238", "text": "The app crashes on checkout when the cart has more than 20 items.", "names": [], "category": "business_text"}
+{"id": "n239", "text": "Customer asked to cancel the order and refund to the original payment method.", "names": [], "category": "business_text"}
+{"id": "n240", "text": "The customer said the parcel was late again.", "names": [], "category": "business_text"}

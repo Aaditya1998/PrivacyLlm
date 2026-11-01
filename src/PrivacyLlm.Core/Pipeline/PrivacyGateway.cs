@@ -87,8 +87,8 @@ public sealed partial class PrivacyGateway(
                 continue;
             }
 
-            // Pseudonymise whenever raw personal data would otherwise reach a non-self-hosted model.
-            var pseudonymize = classification.ContainsPersonalData && tier != InferenceTier.SelfHosted;
+            // Pseudonymise whenever definite or possible personal data would otherwise reach a non-self-hosted model.
+            var pseudonymize = classification.MayContainPersonalData && tier != InferenceTier.SelfHosted;
             if (pseudonymize && !decision.Pseudonymize)
             {
                 // Defence in depth: the policy never produces this, but never trust a single check.
@@ -96,7 +96,7 @@ public sealed partial class PrivacyGateway(
                 continue;
             }
 
-            if (classification.ContainsPersonalData && !pseudonymize &&
+            if (classification.MayContainPersonalData && !pseudonymize &&
                 !routingOptions.AllowedPersonalDataRegions.Contains(client.HostRegion, StringComparer.OrdinalIgnoreCase))
             {
                 return Finish(task, classification, TaskOutcome.RejectedRegion,
@@ -104,8 +104,22 @@ public sealed partial class PrivacyGateway(
             }
 
             var vault = new PseudonymVault();
-            var system = pseudonymize ? Pseudonymize(task.SystemPrompt, vault) : task.SystemPrompt;
-            var input = pseudonymize ? Pseudonymize(task.Input, vault) : task.Input;
+            var system = task.SystemPrompt;
+            var input = task.Input;
+            if (pseudonymize)
+            {
+                // Slice the one classification of system + "\n" + input rather than re-classifying each part,
+                // so a name the context marks in one part (e.g. "Hi Ravi," in the prompt) is masked in both.
+                system = Pseudonymizer.Apply(system, classification.MatchesWithin(0, system.Length), vault);
+                input = Pseudonymizer.Apply(input, classification.MatchesWithin(task.SystemPrompt.Length + 1, input.Length), vault);
+
+                // Residual check: if anything still looks personal after masking, the frontier tier is refused.
+                if (classifier.Classify(system + "\n" + input).MayContainPersonalData)
+                {
+                    errors.Add($"{tier}: refused, residual personal data after pseudonymisation");
+                    continue;
+                }
+            }
 
             try
             {
@@ -138,9 +152,6 @@ public sealed partial class PrivacyGateway(
         if (!record.IsActive) return $"consent for purpose '{task.Purpose}' was withdrawn at {record.WithdrawnAt:O}";
         return null;
     }
-
-    private string Pseudonymize(string text, PseudonymVault vault) =>
-        Pseudonymizer.Apply(text, classifier.Classify(text).Matches, vault);
 
     private LlmTaskResult Finish(
         LlmTask task, ClassificationResult c, TaskOutcome outcome, string reason,

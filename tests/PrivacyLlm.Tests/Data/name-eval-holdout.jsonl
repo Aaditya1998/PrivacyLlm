@@ -1,0 +1,200 @@
+{"id": "h001", "text": "Hi Thejaswini, your refund of Rs 1,240 has been processed to the original payment method.", "names": ["Thejaswini"], "category": "greeting"}
+{"id": "h002", "text": "Hello Lalremsiami, the technician will visit tomorrow between 10 and 12.", "names": ["Lalremsiami"], "category": "greeting"}
+{"id": "h003", "text": "Good morning Hrishikesh, your leave for 14-16 Nov is approved.", "names": ["Hrishikesh"], "category": "greeting"}
+{"id": "h004", "text": "Dear Aatreyee, thank you for your patience regarding ticket #88213.", "names": ["Aatreyee"], "category": "greeting"}
+{"id": "h005", "text": "Hey Navjot, could you share the invoice copy once more?", "names": ["Navjot"], "category": "greeting"}
+{"id": "h006", "text": "Namaste Bhupen, aapka order dispatch ho gaya hai.", "names": ["Bhupen"], "category": "greeting"}
+{"id": "h007", "text": "Vanakkam Sentamizh, your SIM replacement is ready at the store.", "names": ["Sentamizh"], "category": "greeting"}
+{"id": "h008", "text": "Hi Yeshe, the courier could not find your building, please share a landmark.", "names": ["Yeshe"], "category": "greeting"}
+{"id": "h009", "text": "Hello Iqra, we have rescheduled your demo to Thursday 4 PM.", "names": ["Iqra"], "category": "greeting"}
+{"id": "h010", "text": "Dear Pranjal Bordoloi, your KYC verification is complete.", "names": ["Pranjal Bordoloi"], "category": "greeting"}
+{"id": "h011", "text": "Please revert by EOD. Regards, Zubeen", "names": ["Zubeen"], "category": "signoff"}
+{"id": "h012", "text": "Let me know if anything else is needed.\nThanks,\nKaveri Nanjappa", "names": ["Kaveri Nanjappa"], "category": "signoff"}
+{"id": "h013", "text": "Attached the updated roster for next week. - Dhanashree", "names": ["Dhanashree"], "category": "signoff"}
+{"id": "h014", "text": "Will close the ticket after confirmation. Cheers, Anirban", "names": ["Anirban"], "category": "signoff"}
+{"id": "h015", "text": "Sorry for the delay, sending the files now. Warm regards, Mehrunnisa Qureshi", "names": ["Mehrunnisa Qureshi"], "category": "signoff"}
+{"id": "h016", "text": "Payment link shared again, kindly check. Thanks - Tsering Dolma", "names": ["Tsering Dolma"], "category": "signoff"}
+{"id": "h017", "text": "Best, Siddhesh | Ops Lead, Pune hub", "names": ["Siddhesh"], "category": "signoff"}
+{"id": "h018", "text": "Thanks and regards,\nJyotiraditya Kalita\nField Support", "names": ["Jyotiraditya Kalita"], "category": "signoff"}
+{"id": "h019", "text": "ok will do. -lakshmikanth", "names": ["lakshmikanth"], "category": "signoff"}
+{"id": "h020", "text": "Regards, Ningthoujam Bembem", "names": ["Ningthoujam Bembem"], "category": "signoff"}
+{"id": "h021", "text": "Customer Harpreet said the parcel arrived with a torn seal.", "names": ["Harpreet"], "category": "reported_speech"}
+{"id": "h022", "text": "Gurleen called twice about the pending EMI waiver.", "names": ["Gurleen"], "category": "reported_speech"}
+{"id": "h023", "text": "Rukhsar paid Rs 499 via UPI but the order still shows unpaid.", "names": ["Rukhsar"], "category": "reported_speech"}
+{"id": "h024", "text": "Vishwajeet mentioned that the AC unit is making a rattling noise again.", "names": ["Vishwajeet"], "category": "reported_speech"}
+{"id": "h025", "text": "Akhila confirmed the address change over the phone yesterday.", "names": ["Akhila"], "category": "reported_speech"}
+{"id": "h026", "text": "As per Saurabh, the Bhiwandi warehouse is short on packing tape.", "names": ["Saurabh"], "category": "reported_speech"}
+{"id": "h027", "text": "Marykutty complained that the delivery agent was rude.", "names": ["Marykutty"], "category": "reported_speech"}
+{"id": "h028", "text": "Shubhrajit escalated the issue to the regional manager this morning.", "names": ["Shubhrajit"], "category": "reported_speech"}
+{"id": "h029", "text": "Lobsang reported that the gas cylinder was delivered half empty.", "names": ["Lobsang"], "category": "reported_speech"}
+{"id": "h030", "text": "Kavyashree and Manjunath both said they never received the OTP.", "names": ["Kavyashree", "Manjunath"], "category": "reported_speech"}
+{"id": "h031", "text": "Spoke to Fathima Rinsha, she wants a callback after 6.", "names": ["Fathima Rinsha"], "category": "reported_speech"}
+{"id": "h032", "text": "Debjani forwarded the screenshot of the failed transaction.", "names": ["Debjani"], "category": "reported_speech"}
+{"id": "h033", "text": "Pradeep ne bola tha ki payment kal tak aa jayega.", "names": ["Pradeep"], "category": "hinglish"}
+{"id": "h034", "text": "Sunaina ko refund abhi tak nahi mila, please check karo.", "names": ["Sunaina"], "category": "hinglish"}
+{"id": "h035", "text": "Ritesh ka phone switch off aa raha hai, delivery hold pe hai.", "names": ["Ritesh"], "category": "hinglish"}
+{"id": "h036", "text": "kal Tanmay ne order cancel kar diya tha, ab woh wapas maang raha hai", "names": ["Tanmay"], "category": "hinglish"}
+{"id": "h037", "text": "Afreen ki complaint dobara aayi hai, AC service ke baare mein.", "names": ["Afreen"], "category": "hinglish"}
+{"id": "h038", "text": "Kuldeep se baat karo, usko address pata hai.", "names": ["Kuldeep"], "category": "hinglish"}
+{"id": "h039", "text": "Usha aunty ka parcel galat flat mein chala gaya.", "names": ["Usha"], "category": "hinglish"}
+{"id": "h040", "text": "Jaspreet ke account mein do baar paisa cut gaya.", "names": ["Jaspreet"], "category": "hinglish"}
+{"id": "h041", "text": "Mohsin ko bolo ki 5 baje tak godown pahunche.", "names": ["Mohsin"], "category": "hinglish"}
+{"id": "h042", "text": "Shalini ne review mein 1 star diya hai, dekh lo.", "names": ["Shalini"], "category": "hinglish"}
+{"id": "h043", "text": "Abhishek aur Nidhi dono ka joining letter ready hai.", "names": ["Abhishek", "Nidhi"], "category": "hinglish"}
+{"id": "h044", "text": "Rakesh bhai, aaj ka route sheet bhej do.", "names": ["Rakesh"], "category": "honorific"}
+{"id": "h045", "text": "Venkatesh garu, mee order ready ga undi.", "names": ["Venkatesh"], "category": "honorific"}
+{"id": "h046", "text": "Murugan anna, please collect the return from Velachery.", "names": ["Murugan"], "category": "honorific"}
+{"id": "h047", "text": "Ok Sharmila didi, I will tell the driver.", "names": ["Sharmila"], "category": "honorific"}
+{"id": "h048", "text": "Thank you Hemant sir for the quick approval.", "names": ["Hemant"], "category": "honorific"}
+{"id": "h049", "text": "Good evening Rosy madam, your gas booking is confirmed.", "names": ["Rosy"], "category": "honorific"}
+{"id": "h050", "text": "Chitra akka, the saree pickup is scheduled for Monday.", "names": ["Chitra"], "category": "honorific"}
+{"id": "h051", "text": "Balwinder paaji, truck number confirm kar do.", "names": ["Balwinder"], "category": "honorific"}
+{"id": "h052", "text": "Srinivasulu garu called regarding the pension form.", "names": ["Srinivasulu"], "category": "honorific"}
+{"id": "h053", "text": "Parminder ji ne bola cash on delivery chahiye.", "names": ["Parminder"], "category": "honorific"}
+{"id": "h054", "text": "Thank you Dipankar da for handling the Siliguri shipment.", "names": ["Dipankar"], "category": "honorific"}
+{"id": "h055", "text": "Kalyani ji, aapki policy renew ho gayi hai.", "names": ["Kalyani"], "category": "honorific"}
+{"id": "h056", "text": "Ok Sandeep sir, will update the tracker.", "names": ["Sandeep"], "category": "honorific"}
+{"id": "h057", "text": "Selvi amma wants the gas delivered before noon.", "names": ["Selvi"], "category": "honorific"}
+{"id": "h058", "text": "ask ramesh to call the customer back asap", "names": ["ramesh"], "category": "lowercase_chat"}
+{"id": "h059", "text": "pls tell priyanka the meeting moved to 3", "names": ["priyanka"], "category": "lowercase_chat"}
+{"id": "h060", "text": "did aswathy upload the timesheet?", "names": ["aswathy"], "category": "lowercase_chat"}
+{"id": "h061", "text": "nitin is on leave today, give his tickets to farhan", "names": ["nitin", "farhan"], "category": "lowercase_chat"}
+{"id": "h062", "text": "can someone check with mahesh why the van is late", "names": ["mahesh"], "category": "lowercase_chat"}
+{"id": "h063", "text": "sukhmani already closed that complaint", "names": ["sukhmani"], "category": "lowercase_chat"}
+{"id": "h064", "text": "remind deepika abt the appraisal form", "names": ["deepika"], "category": "lowercase_chat"}
+{"id": "h065", "text": "hrithik not picking up, try his alternate no", "names": ["hrithik"], "category": "lowercase_chat"}
+{"id": "h066", "text": "omkar pls share the dispatch list", "names": ["omkar"], "category": "lowercase_chat"}
+{"id": "h067", "text": "talked to rehana, she is fine with sat delivery", "names": ["rehana"], "category": "lowercase_chat"}
+{"id": "h068", "text": "Anjali ur order is out for delivery, plz keep cash ready", "names": ["Anjali"], "category": "whatsapp"}
+{"id": "h069", "text": "Gm all, Prasanth will cover the morning shift tmrw", "names": ["Prasanth"], "category": "whatsapp"}
+{"id": "h070", "text": "Shreya thanks a lot!! got the parcel", "names": ["Shreya"], "category": "whatsapp"}
+{"id": "h071", "text": "Wasim bro where r u, customer waiting", "names": ["Wasim"], "category": "whatsapp"}
+{"id": "h072", "text": "ok noted Bhavana, will share by 5", "names": ["Bhavana"], "category": "whatsapp"}
+{"id": "h073", "text": "Happy bday Riya!! cake in pantry at 4", "names": ["Riya"], "category": "whatsapp"}
+{"id": "h074", "text": "Mithun pls dont forget the cheque", "names": ["Mithun"], "category": "whatsapp"}
+{"id": "h075", "text": "Congrats Eshwar on the promotion", "names": ["Eshwar"], "category": "whatsapp"}
+{"id": "h076", "text": "Rinku plz call me back urgent", "names": ["Rinku"], "category": "whatsapp"}
+{"id": "h077", "text": "haha ok Tejas, see u at the hub", "names": ["Tejas"], "category": "whatsapp"}
+{"id": "h078", "text": "DEAR SURESH, YOUR ORDER #45821 WILL BE DELIVERED TODAY BY 7 PM.", "names": ["SURESH"], "category": "allcaps_sms"}
+{"id": "h079", "text": "HI MEENAKSHI, YOUR DELIVERY IS SCHEDULED FOR TOMORROW MORNING.", "names": ["MEENAKSHI"], "category": "allcaps_sms"}
+{"id": "h080", "text": "DEAR GAURAV KHANNA YOUR POLICY PREMIUM IS DUE ON 05-DEC.", "names": ["GAURAV KHANNA"], "category": "allcaps_sms"}
+{"id": "h081", "text": "RAJINDER YOUR CYLINDER BOOKING NO 22981 IS CONFIRMED", "names": ["RAJINDER"], "category": "allcaps_sms"}
+{"id": "h082", "text": "HELLO NEELAM, YOUR APPOINTMENT IS ON 12 NOV AT 11 AM.", "names": ["NEELAM"], "category": "allcaps_sms"}
+{"id": "h083", "text": "DEAR ARULMOZHI, REFUND OF RS 650 CREDITED.", "names": ["ARULMOZHI"], "category": "allcaps_sms"}
+{"id": "h084", "text": "AGENT VIKRANT IS ON THE WAY. TRACK LIVE ON APP.", "names": ["VIKRANT"], "category": "allcaps_sms"}
+{"id": "h085", "text": "THANKS ROSHNI FOR SHOPPING WITH US.", "names": ["ROSHNI"], "category": "allcaps_sms"}
+{"id": "h086", "text": "Asha will handle the onboarding calls this week.", "names": ["Asha"], "category": "word_name"}
+{"id": "h087", "text": "Please send the revised quote to Kiran before lunch.", "names": ["Kiran"], "category": "word_name"}
+{"id": "h088", "text": "Pooja called to reschedule her installation.", "names": ["Pooja"], "category": "word_name"}
+{"id": "h089", "text": "Sunny dropped the samples at the reception.", "names": ["Sunny"], "category": "word_name"}
+{"id": "h090", "text": "Hi Joy, your locker key is ready for pickup.", "names": ["Joy"], "category": "word_name"}
+{"id": "h091", "text": "Prem said the courier took the wrong package.", "names": ["Prem"], "category": "word_name"}
+{"id": "h092", "text": "Ask Shanti whether the stock count is done.", "names": ["Shanti"], "category": "word_name"}
+{"id": "h093", "text": "Lucky will drive the second van today.", "names": ["Lucky"], "category": "word_name"}
+{"id": "h094", "text": "Thanks Dharma, the payroll file looks correct.", "names": ["Dharma"], "category": "word_name"}
+{"id": "h095", "text": "Sagar confirmed the fridge was delivered intact.", "names": ["Sagar"], "category": "word_name"}
+{"id": "h096", "text": "Hi Rose, your saree alteration is done.", "names": ["Rose"], "category": "word_name"}
+{"id": "h097", "text": "Basant and Sona are both on night shift.", "names": ["Basant", "Sona"], "category": "word_name"}
+{"id": "h098", "text": "Lalchhanhima called from Aizawl about the damaged TV.", "names": ["Lalchhanhima"], "category": "rare_regional"}
+{"id": "h099", "text": "Please assign the Kohima ticket to Neikhrielie.", "names": ["Neikhrielie"], "category": "rare_regional"}
+{"id": "h100", "text": "Phurba is waiting at the Gangtok counter for the documents.", "names": ["Phurba"], "category": "rare_regional"}
+{"id": "h101", "text": "Sreelakshmi and Anupama joined the Kochi team today.", "names": ["Sreelakshmi", "Anupama"], "category": "rare_regional"}
+{"id": "h102", "text": "The AC complaint was raised by Thoibi from Imphal.", "names": ["Thoibi"], "category": "rare_regional"}
+{"id": "h103", "text": "Kindly route the call to Hiranmayee in billing.", "names": ["Hiranmayee"], "category": "rare_regional"}
+{"id": "h104", "text": "Ibanshaphrang will collect the parcel from the Shillong office.", "names": ["Ibanshaphrang"], "category": "rare_regional"}
+{"id": "h105", "text": "Approved the travel claim for Shivranjani.", "names": ["Shivranjani"], "category": "rare_regional"}
+{"id": "h106", "text": "Shamsher and Taranjit are swapping shifts on Friday.", "names": ["Shamsher", "Taranjit"], "category": "rare_regional"}
+{"id": "h107", "text": "Rajlakshmi Gogoi updated the vendor sheet.", "names": ["Rajlakshmi Gogoi"], "category": "rare_regional"}
+{"id": "h108", "text": "Mahfuza raised a ticket about the missing invoice.", "names": ["Mahfuza"], "category": "rare_regional"}
+{"id": "h109", "text": "Onboarding for Rithvik starts Monday; laptop request raised.", "names": ["Rithvik"], "category": "rare_regional"}
+{"id": "h110", "text": "Cyrus Bharucha signed the offer letter this afternoon.", "names": ["Cyrus Bharucha"], "category": "rare_regional"}
+{"id": "h111", "text": "Mega Diwali Sale! Flat 60% off on all kitchen appliances, today only.", "names": [], "category": "marketing"}
+{"id": "h112", "text": "Shop now and get free delivery on orders above Rs 499.", "names": [], "category": "marketing"}
+{"id": "h113", "text": "Upgrade to Premium and unlock unlimited downloads this monsoon.", "names": [], "category": "marketing"}
+{"id": "h114", "text": "Buy 2 get 1 free on all summer kurtas. Offer valid till stocks last.", "names": [], "category": "marketing"}
+{"id": "h115", "text": "Limited period offer: zero cost EMI on smartphones above Rs 15,000.", "names": [], "category": "marketing"}
+{"id": "h116", "text": "Refer a friend and both of you get Rs 100 wallet credit.", "names": [], "category": "marketing"}
+{"id": "h117", "text": "Hurry! Only 3 hours left for the midnight flash sale.", "names": [], "category": "marketing"}
+{"id": "h118", "text": "Get 20% off your first order with code WELCOME20.", "names": [], "category": "marketing"}
+{"id": "h119", "text": "Lucky draw winners will be announced on our page next week.", "names": [], "category": "marketing"}
+{"id": "h120", "text": "Experience pure joy with our new range of chocolates.", "names": [], "category": "marketing"}
+{"id": "h121", "text": "Celebrate Ganesh Chaturthi with eco-friendly clay idols, now 30% off.", "names": [], "category": "festival"}
+{"id": "h122", "text": "Wishing you a Happy Diwali and a prosperous New Year from all of us.", "names": [], "category": "festival"}
+{"id": "h123", "text": "This Navratri, get festive outfits starting at Rs 799.", "names": [], "category": "festival"}
+{"id": "h124", "text": "Eid Mubarak! Enjoy special discounts on dry fruits and sewaiyan.", "names": [], "category": "festival"}
+{"id": "h125", "text": "Celebrate Onam with our special sadya combo for four.", "names": [], "category": "festival"}
+{"id": "h126", "text": "Durga Puja special: pandal-hopping cab passes at flat Rs 299.", "names": [], "category": "festival"}
+{"id": "h127", "text": "Happy Pongal! Fresh sugarcane and jaggery delivered to your door.", "names": [], "category": "festival"}
+{"id": "h128", "text": "Christmas hampers with plum cake and wine biscuits now available.", "names": [], "category": "festival"}
+{"id": "h129", "text": "Raksha Bandhan gift boxes with rakhi and sweets, order by Thursday.", "names": [], "category": "festival"}
+{"id": "h130", "text": "Wish your family a joyful Lohri with our gajak and rewri hampers.", "names": [], "category": "festival"}
+{"id": "h131", "text": "Deliver to Flat 4B, Gandhi Nagar, near Indira Chowk, Nagpur.", "names": [], "category": "address_landmark"}
+{"id": "h132", "text": "Pickup point: Shivaji Park gate no. 2, Dadar West.", "names": [], "category": "address_landmark"}
+{"id": "h133", "text": "The store is on MG Road, opposite Nehru Stadium.", "names": [], "category": "address_landmark"}
+{"id": "h134", "text": "Turn left after the Rajiv Gandhi International Airport exit.", "names": [], "category": "address_landmark"}
+{"id": "h135", "text": "Address: 21, Subhash Chandra Bose Marg, Sector 9.", "names": [], "category": "address_landmark"}
+{"id": "h136", "text": "Our new branch opens at Netaji Subhash Place, Pitampura.", "names": [], "category": "address_landmark"}
+{"id": "h137", "text": "Landmark: behind Hanuman Mandir, Krishna Colony.", "names": [], "category": "address_landmark"}
+{"id": "h138", "text": "Drop the parcel at Sardar Patel Bhawan reception.", "names": [], "category": "address_landmark"}
+{"id": "h139", "text": "Customer lives near Tilak Smarak, Laxmi Road, Pune.", "names": [], "category": "address_landmark"}
+{"id": "h140", "text": "Shipment stuck at the Chhatrapati Shivaji Maharaj Terminus parcel office.", "names": [], "category": "address_landmark"}
+{"id": "h141", "text": "The warehouse is beside Ambedkar Circle, Mysuru.", "names": [], "category": "address_landmark"}
+{"id": "h142", "text": "Venue: Rabindra Sadan, Cathedral Road, Kolkata.", "names": [], "category": "address_landmark"}
+{"id": "h143", "text": "Office address: 3rd floor, Tagore Towers, Anna Salai, Chennai.", "names": [], "category": "address_landmark"}
+{"id": "h144", "text": "Deliveries to Saraswati Vihar and Ram Nagar are delayed today.", "names": [], "category": "address_landmark"}
+{"id": "h145", "text": "Tata Salt and Amul Butter are back in stock.", "names": [], "category": "brand_product"}
+{"id": "h146", "text": "Bajaj Pulsar service kit includes oil filter and spark plug.", "names": [], "category": "brand_product"}
+{"id": "h147", "text": "Install the latest Paytm update to continue using UPI.", "names": [], "category": "brand_product"}
+{"id": "h148", "text": "Book a Maruti Suzuki Swift test drive from the app.", "names": [], "category": "brand_product"}
+{"id": "h149", "text": "The Godrej almirah will be delivered in two boxes.", "names": [], "category": "brand_product"}
+{"id": "h150", "text": "Haldiram's bhujia 1kg pack is out of stock in Delhi NCR.", "names": [], "category": "brand_product"}
+{"id": "h151", "text": "Your Mahindra Thar booking has moved to the next batch.", "names": [], "category": "brand_product"}
+{"id": "h152", "text": "Lakme lipstick shade 204 is discontinued.", "names": [], "category": "brand_product"}
+{"id": "h153", "text": "Parle-G family pack prices revised from next month.", "names": [], "category": "brand_product"}
+{"id": "h154", "text": "Water levels in the Ganga and Yamuna have risen after heavy rain.", "names": [], "category": "river_temple"}
+{"id": "h155", "text": "Ferry services on the Brahmaputra are suspended till Sunday.", "names": [], "category": "river_temple"}
+{"id": "h156", "text": "Tour package includes Meenakshi Temple and Rameswaram darshan.", "names": [], "category": "river_temple"}
+{"id": "h157", "text": "Kaveri water release to Tamil Nadu resumes this week.", "names": [], "category": "river_temple"}
+{"id": "h158", "text": "The Godavari Pushkaralu crowd is expected to peak tomorrow.", "names": [], "category": "river_temple"}
+{"id": "h159", "text": "Visit Tirupati Balaji and Padmavathi temple in one day.", "names": [], "category": "river_temple"}
+{"id": "h160", "text": "Narmada canal works will affect deliveries near Bharuch.", "names": [], "category": "river_temple"}
+{"id": "h161", "text": "Somnath and Dwarka darshan bus leaves at 6 AM.", "names": [], "category": "river_temple"}
+{"id": "h162", "text": "Pure brass Lakshmi Ganesh idol set, 6 inch, with gift box.", "names": [], "category": "religious_product"}
+{"id": "h163", "text": "Shiva lingam marble statue for home puja, free shipping.", "names": [], "category": "religious_product"}
+{"id": "h164", "text": "Hanuman Chalisa audio book now available in Telugu.", "names": [], "category": "religious_product"}
+{"id": "h165", "text": "Sai Baba photo frame with LED backlight.", "names": [], "category": "religious_product"}
+{"id": "h166", "text": "Durga Saptashati book with Hindi translation, paperback.", "names": [], "category": "religious_product"}
+{"id": "h167", "text": "Buy a Radha Krishna wall hanging for the pooja room.", "names": [], "category": "religious_product"}
+{"id": "h168", "text": "Sukhmani Sahib gutka and rumala sets available in our store.", "names": [], "category": "religious_product"}
+{"id": "h169", "text": "Krishna Janmashtami jhula decoration kit, 3 piece set.", "names": [], "category": "religious_product"}
+{"id": "h170", "text": "Assign this ticket to the billing team.", "names": [], "category": "team_role"}
+{"id": "h171", "text": "Escalate to the Tier 2 support desk if not resolved in 24 hours.", "names": [], "category": "team_role"}
+{"id": "h172", "text": "The delivery executive will call before arriving.", "names": [], "category": "team_role"}
+{"id": "h173", "text": "Please contact your relationship manager for loan details.", "names": [], "category": "team_role"}
+{"id": "h174", "text": "HR team will share the offer letter by Friday.", "names": [], "category": "team_role"}
+{"id": "h175", "text": "The night shift supervisor approved the overtime.", "names": [], "category": "team_role"}
+{"id": "h176", "text": "Our field technician will carry the spare part.", "names": [], "category": "team_role"}
+{"id": "h177", "text": "The sunny weather helped the drying process at the godown.", "names": [], "category": "ordinary_words"}
+{"id": "h178", "text": "We wish everyone peace, or shanti, this festive season.", "names": [], "category": "ordinary_words"}
+{"id": "h179", "text": "Today's pooja at the office starts at 9 AM, everyone is invited.", "names": [], "category": "ordinary_words"}
+{"id": "h180", "text": "The rose plants in the lobby need watering.", "names": [], "category": "ordinary_words"}
+{"id": "h181", "text": "That was a lucky escape, the truck missed the divider by inches.", "names": [], "category": "ordinary_words"}
+{"id": "h182", "text": "Please add Basant Panchami to the holiday calendar.", "names": [], "category": "ordinary_words"}
+{"id": "h183", "text": "Sona Masoori rice 25kg bag is back in stock.", "names": [], "category": "ordinary_words"}
+{"id": "h184", "text": "ASHA workers in the district received new tablets.", "names": [], "category": "ordinary_words"}
+{"id": "h185", "text": "Please mark the order as urgent and keep it in the priority bin.", "names": [], "category": "ordinary_words"}
+{"id": "h186", "text": "2026-10-14 12:03:11 ERROR OrderService - timeout calling payment gateway (retry=3)", "names": [], "category": "code_log"}
+{"id": "h187", "text": "INFO [worker-7] processed 1532 records in 4.2s", "names": [], "category": "code_log"}
+{"id": "h188", "text": "SELECT customer_id, order_total FROM orders WHERE status = 'PENDING';", "names": [], "category": "code_log"}
+{"id": "h189", "text": "var userName = request.Query[\"name\"]; if (string.IsNullOrEmpty(userName)) return BadRequest();", "names": [], "category": "code_log"}
+{"id": "h190", "text": "WARN cache miss for key session:8f2a91 ttl=300", "names": [], "category": "code_log"}
+{"id": "h191", "text": "HTTP 502 Bad Gateway from upstream inventory-api", "names": [], "category": "code_log"}
+{"id": "h192", "text": "Soak the rajma overnight, then pressure cook for 5 whistles.", "names": [], "category": "recipe"}
+{"id": "h193", "text": "Temper mustard seeds, curry leaves and hing in hot coconut oil.", "names": [], "category": "recipe"}
+{"id": "h194", "text": "For mohanthal, roast besan in ghee until golden, then add sugar syrup.", "names": [], "category": "recipe"}
+{"id": "h195", "text": "For Mysore pak, keep stirring the ghee and gram flour on low flame.", "names": [], "category": "recipe"}
+{"id": "h196", "text": "Heavy rainfall expected over coastal Karnataka and Goa for the next 48 hours.", "names": [], "category": "weather_news"}
+{"id": "h197", "text": "IMD issues orange alert for Mumbai, Thane and Palghar.", "names": [], "category": "weather_news"}
+{"id": "h198", "text": "Cyclone likely to make landfall near the Odisha coast by Tuesday evening.", "names": [], "category": "weather_news"}
+{"id": "h199", "text": "Fog delays 40 trains arriving in Delhi this morning.", "names": [], "category": "weather_news"}
+{"id": "h200", "text": "Air quality in Delhi remains in the very poor category.", "names": [], "category": "weather_news"}

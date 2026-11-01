@@ -46,6 +46,9 @@ builder.Services.AddHangfireServer(o =>
 var app = builder.Build();
 
 app.Services.EnsurePrivacyLlmStorageCreated();
+
+// Load the name lists now: a missing or truncated list must stop the host, not quietly stop detecting names.
+app.Services.GetRequiredService<IPiiDetector>();
 app.Logger.LogInformation("Storage: {Provider}; Hangfire: {Hangfire}", storage, string.IsNullOrEmpty(hangfireSql) ? "in-memory" : "SQL Server");
 if (storage != StorageProvider.InMemory && string.IsNullOrEmpty(hangfireSql))
     app.Logger.LogWarning("Payloads are durable but the Hangfire queue is in-memory: queued jobs are lost on restart and their payloads expire unprocessed. Set ConnectionStrings:Hangfire for a durable queue.");

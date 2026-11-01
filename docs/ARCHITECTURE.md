@@ -39,6 +39,48 @@ better served by frontier models.
 | Pseudonymised frontier path never sends names or phone numbers, and output is rehydrated | `Approved_task_is_pseudonymised_for_frontier_and_rehydrated` |
 | Audit log holds no raw values | `Qwen_think_blocks_are_stripped_and_audit_holds_no_raw_text` |
 
+### Unlabelled names
+
+The regex detector only sees names after a label ("Customer: Priya Sharma", "Mr. Ravi Kumar"). Text such as
+"Ravi said the parcel was late" or "Anil bhai ka order" used to be classified Public and sent to the frontier
+API. `ContextualNameDetector` (`src/PrivacyLlm.Core/Classification/Names`) closes that gap without a model:
+
+- **Evidence per word:** curated lists (given names, surnames, ambiguous words with a reason, places,
+  exclusion phrases; see `Data/SOURCES.md`) plus context cues in `NameSignals.cs`: greetings, sign-offs,
+  kinship words (bhai, ji, didi, garu, da), relation nouns, speech verbs, Hindi postpositions (ne, ko, ka),
+  "X from accounts", "assign to X", possessives, adjacent names, capitalisation (only when the text is
+  mixed-case).
+- **Suppression:** a following place/brand/festival word (Nagar, Road, Motors, Chaturthi, Darshan...),
+  an exclusion phrase, or a deity prefix ("Lord Shiva") rules a word out unless a kinship word anchors it.
+- **Three bands** from `score = sigmoid(evidence - 2.5)`:
+
+| Band | Score | Effect |
+|---|---|---|
+| Definite | ≥ 0.70 | Personal data: self-hosted only, consent required |
+| Possible | 0.30–0.70 | Stays on the self-hosted tier and is pseudonymised, but no consent check |
+| None | < 0.30 | Frontier-eligible |
+
+- **Fail closed:** if the name detector throws, the whole text is a possible name; a missing or truncated
+  word list stops the app at startup. Thresholds are clamped (0.2–0.5 / 0.5–0.85) and there is no off switch.
+- **Gateway:** the pseudonymised-frontier path masks system prompt and input from one classification, then
+  re-classifies the masked text and refuses the frontier tier if anything still looks personal.
+
+Measured on synthetic labelled messages (`tests/PrivacyLlm.Tests/Data`):
+
+| Set | Positives kept off frontier | Negatives left frontier-eligible |
+|---|---|---|
+| Development (tuned on) | 99.2% | 100% |
+| First held-out set (scored 87.3% on first sight, then used to find rule gaps) | 100% | 100% |
+| **Held-out v2** (written independently afterwards, scored once) | **93.8%** | **91.8%** |
+
+Held-out v2 is the honest number. Remaining misses are rare names in unusual patterns ("received by Ganga",
+"Moni baideu"); false alarms are mostly brand/pilgrimage text ("Surya Roshni", "Puri"), which only costs a
+self-hosted call. End to end, 77.3% of v2 negatives stay frontier-eligible: the older address regex also
+flags landmarks such as "Lakshmi Nagar", which is a separate precision issue.
+
+**Behaviour change:** a definite name in a task with no `DataPrincipalId` is now `RejectedNoConsent`, where it
+used to go to the frontier API. Possible names never cause a rejection.
+
 ### Why the detector is recall-biased
 
 A false positive costs one self-hosted call instead of a frontier call. A false negative leaks personal data.

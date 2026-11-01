@@ -33,8 +33,8 @@ public interface IRoutingPolicy
 }
 
 /// <summary>
-/// The single place that decides where a prompt may go. Invariant: raw personal data is only ever
-/// sent to the self-hosted tier, and personal-data tasks never fall back to the frontier tier.
+/// The single place that decides where a prompt may go. Invariant: raw personal data, definite or
+/// possible, is only ever sent to the self-hosted tier, and such tasks never fall back to the frontier tier.
 /// </summary>
 public sealed class PrivacyRoutingPolicy(RoutingOptions options) : IRoutingPolicy
 {
@@ -50,6 +50,10 @@ public sealed class PrivacyRoutingPolicy(RoutingOptions options) : IRoutingPolic
 
             case DataSensitivity.Personal:
                 return new(InferenceTier.SelfHosted, false, null, "personal data: self-hosted only, no fallback");
+
+            // Before the AlwaysSelfHosted branch, which would otherwise allow a frontier fallback.
+            case DataSensitivity.Public when classification.SuspectedPersonal:
+                return new(InferenceTier.SelfHosted, false, null, "possible personal name: self-hosted only, no fallback");
 
             default:
                 if (Contains(options.AlwaysSelfHostedTaskTypes, taskType))

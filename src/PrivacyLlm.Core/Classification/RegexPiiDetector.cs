@@ -48,9 +48,9 @@ public sealed partial class RegexPiiDetector : IPiiDetector
     [GeneratedRegex(@"\b(?:dob|d\.o\.b\.?|date of birth|born on)\s*[:\-]?\s*(\d{1,2}[/\-.]\d{1,2}[/\-.]\d{2,4})", RegexOptions.CultureInvariant | RegexOptions.IgnoreCase, 250)]
     private static partial Regex DobRegex();
 
-    // Honorific / label-introduced names: "Mr. Ravi Kumar", "Smt Lakshmi", "Name: Priya Sharma", "customer Arjun Mehta"
+    // Honorific / label-introduced names: "Mr. Ravi Kumar", "Mr.Ravi", "Smt Lakshmi", "Name: Priya Sharma", "customer Arjun Mehta"
     // Labels are case-insensitive; the name itself must be Title Case so "at the gate" is not captured.
-    [GeneratedRegex(@"(?:\b(?i:name|customer|consignee|recipient|deliver to|attn)\s*[:\-]?\s*(?:(?i:Mr|Mrs|Ms|Miss|Dr|Shri|Sri|Smt|Kumari|Km)\.?\s+)?|\b(?i:Mr|Mrs|Ms|Miss|Dr|Shri|Sri|Smt|Kumari|Km)\.?\s+)((?:[A-Z][a-z]+)(?:\s+[A-Z][a-z]+){0,3})", RegexOptions.CultureInvariant, 250)]
+    [GeneratedRegex(@"(?:\b(?i:name|customer|consignee|recipient|deliver to|attn)\s*[:\-]?\s*(?:(?i:Mr|Mrs|Ms|Miss|Dr|Shri|Sri|Smt|Kumari|Km)(?:\.\s*|\s+))?|\b(?i:Mr|Mrs|Ms|Miss|Dr|Shri|Sri|Smt|Kumari|Km)(?:\.\s*|\s+))((?:[A-Z][a-z]+)(?:\s+[A-Z][a-z]+){0,3})", RegexOptions.CultureInvariant, 250)]
     private static partial Regex NameRegex();
 
     // Address lines: house/flat markers or typical Indian locality suffixes.
@@ -102,7 +102,7 @@ public sealed partial class RegexPiiDetector : IPiiDetector
             return new[] { new PiiMatch(PiiType.Address, 0, text.Length, text, 0.0) };
         }
 
-        return ResolveOverlaps(matches);
+        return PiiMatchMerger.ResolveOverlaps(matches);
     }
 
     private static void Add(List<PiiMatch> list, Regex regex, string text, PiiType type, double confidence)
@@ -127,37 +127,4 @@ public sealed partial class RegexPiiDetector : IPiiDetector
     }
 
     private static string Digits(string s) => new(s.Where(char.IsDigit).ToArray());
-
-    /// <summary>
-    /// Keeps the earliest-added (most specific) match when spans overlap. Address spans are the
-    /// exception: they often contain a phone or pincode, so the uncovered fragments are kept as
-    /// separate Address matches rather than discarding the rest of the address.
-    /// </summary>
-    private static IReadOnlyList<PiiMatch> ResolveOverlaps(List<PiiMatch> matches)
-    {
-        var kept = new List<PiiMatch>();
-        foreach (var m in matches)
-        {
-            var overlaps = kept.Where(k => m.Start < k.End && k.Start < m.End).OrderBy(k => k.Start).ToList();
-            if (overlaps.Count == 0)
-            {
-                kept.Add(m);
-                continue;
-            }
-
-            if (m.Type != PiiType.Address) continue;
-
-            var cursor = m.Start;
-            foreach (var k in overlaps.Append(new PiiMatch(PiiType.Address, m.End, 0, "", 0)))
-            {
-                var fragment = m.Value.Substring(Math.Min(cursor - m.Start, m.Value.Length), Math.Max(0, Math.Min(k.Start, m.End) - cursor));
-                var trimmed = fragment.Trim(' ', ',', '-', '.');
-                if (trimmed.Length >= 4)
-                    kept.Add(m with { Start = cursor + fragment.IndexOf(trimmed, StringComparison.Ordinal), Length = trimmed.Length, Value = trimmed });
-                cursor = Math.Max(cursor, k.End);
-            }
-        }
-
-        return kept.OrderBy(m => m.Start).ToList();
-    }
 }
