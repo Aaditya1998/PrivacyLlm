@@ -6,6 +6,7 @@ using PrivacyLlm.Core.Pipeline;
 
 namespace PrivacyLlm.Tests;
 
+[Collection(ApiHostCollection.Name)]
 public sealed class ApiValidationTests : IClassFixture<WebApplicationFactory<Program>>
 {
     private readonly HttpClient _http;
@@ -15,7 +16,8 @@ public sealed class ApiValidationTests : IClassFixture<WebApplicationFactory<Pro
         {
             b.UseSetting("SelfHostedLlm:BaseUrl", "http://127.0.0.1:9");
             b.UseSetting("FrontierLlm:Enabled", "false");
-        }).CreateClient();
+            b.WithFullAccessClient();
+        }).CreateClient().WithKey(TestAuth.FullKey);
 
     [Theory]
     [InlineData("cust-42", true)]
